@@ -75,3 +75,49 @@ class medicine(models.Model):
 
 
 
+
+
+
+# Create your models here.
+class newuser(models.Model):
+    Username=models.CharField(max_length=80)
+    fname=models.CharField(max_length=89)
+    lname=models.CharField(max_length=88)
+    email=models.EmailField(max_length=90)
+    pass1=models.CharField(max_length=90)
+    pass2=models.CharField(max_length=90)
+
+    def __str__(self):
+        
+	    return self.Username
+   
+
+class Doctorinformation(models.Model):
+    dname=models.CharField(max_length=80)
+    address=models.CharField(max_length=89)
+    
+    email=models.EmailField(max_length=90)
+    mobileno=models.CharField(max_length=90)
+    qual=models.CharField(max_length=90)
+    exe=models.CharField(max_length=90)
+    pass1=models.CharField(max_length=90)
+    pass2=models.CharField(max_length=90)
+
+
+class uploadmedicine(models.Model):
+    tmedicine=models.CharField(max_length=80)
+    mname=models.CharField(max_length=89)
+    
+    cname=models.CharField(max_length=90)
+    mdate=models.CharField(max_length=90)
+    exdate=models.CharField(max_length=90)
+    ml=models.CharField(max_length=90)
+    medicine=models.CharField(max_length=90)
+    quantity=models.CharField(max_length=90)
+    uname=models.CharField(max_length=90)
+    address=models.CharField(max_length=90)
+    phone=models.CharField(max_length=90)
+    email=models.EmailField(max_length=90)
+    image=models.ImageField(upload_to='images',default="")  
+    image2=models.ImageField(upload_to='images',default="")  
+    
